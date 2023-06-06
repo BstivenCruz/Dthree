@@ -4,8 +4,8 @@ export default function Nav() {
 
   const navigation = [
     { name: "Home", href: "/", current: actualUrl === "/" },
-    { name: "Estudio", href: "/Estudio", current: actualUrl === "/studio" },
-    { name: "Crew", href: "crew", current: actualUrl === "/crew" },
+    { name: "Estudio", href: "/estudio", current: actualUrl === "/estudio" },
+    { name: "Crew", href: "/crew", current: actualUrl === "/crew" },
     {
       name: "Entretenimiento",
       href: "/Entretenimiento",
@@ -13,7 +13,7 @@ export default function Nav() {
     },
     {
       name: "Contactanos",
-      href: "/Contactanos",
+      href: "/contactanos",
       current: actualUrl === "/Contactanos",
     },
   ];
