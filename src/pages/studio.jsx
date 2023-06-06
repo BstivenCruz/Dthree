@@ -1,6 +1,8 @@
 import Carrousel from "../components/Carrousel";
 import Welcome from "../components/Welcome";
+import { Link as Anchor, useNavigate } from "react-router-dom";
 export default function Studio() {
+  const navigate = useNavigate()
   return (
     <>
       <Welcome text="Estudio" />
@@ -12,7 +14,7 @@ export default function Studio() {
         <h1> trifas</h1>
         <div className="border h-[80%] w-full flex">
           <div className="border w-1/2 flex items-center justify-center">
-            <p>clase precios </p>
+            <Anchor onClick={()=>navigate('/clases')}>clases precios</Anchor>
           </div>
           <div className="border w-1/2 flex items-center justify-center">
             <p>clase precios </p>
