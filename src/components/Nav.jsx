@@ -1,9 +1,10 @@
+import logo from "../assets/D3_Blanco.png";
 export default function Nav() {
   const actualUrl = window.location.pathname;
 
   const navigation = [
     { name: "Home", href: "/", current: actualUrl === "/" },
-    { name: "Studio", href: "/studio", current: actualUrl === "/studio" },
+    { name: "Estudio", href: "/Estudio", current: actualUrl === "/studio" },
     { name: "Crew", href: "crew", current: actualUrl === "/crew" },
     {
       name: "Entretenimiento",
@@ -20,10 +21,16 @@ export default function Nav() {
     return classes.filter(Boolean).join(" ");
   }
 
+  const position = window.scrollY > 50
+ 
+console.log(position)
   return (
     <>
-      <div className=" bg-[rgb(255,255,255)]  hidden  text-red-500 h-[10vh]  md:flex items-center justify-between w-screen px-5">
-        <h1 className="w-1/6  h-full flex justify-center items-center">logo</h1>
+      <div className={` bg-[rgba(255,255,255,0)] hidden absolute top-0 duration-150  text-red-500 h-fit   md:flex items-center justify-between max-w-screen px-5`}>
+        <img
+          className="w-[8%] sticky top-0 ml-10 flex object-cover  justify-center items-center"
+          src={logo}
+        />
         <div className=" w-1/2 h-full flex justify-between items-center">
           {navigation.map((item) => (
             <a
@@ -31,8 +38,8 @@ export default function Nav() {
               href={item.href}
               className={classNames(
                 item.current
-                  ? "border-b border-b-red-500 text-black"
-                  : "text-black hover:border-b-red-500 hover:border-b ",
+                  ? "border-b-2 border-b-red-500 text-white"
+                  : "text-white hover:border-b-red-500 hover:border-b-2 ",
                 " px-3 py-2  font-semibold text-xl"
               )}
               aria-current={item.current ? "page" : undefined}
