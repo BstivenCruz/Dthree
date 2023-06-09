@@ -26,9 +26,9 @@ export default function Welcome({ text }) {
 
   return (
     <div
-      className={`  bg-cover h-[100vh] bg-[url('${img[photo]}')] font-semibold`}
+      className={`hero bg-cover h-[100vh] bg-[url('${img[photo]}')] font-semibold`}
     >
-      <div className=" bg-[rgba(34,31,31,0.75)] w-full h-full flex items-center">
+      <div className=" px-10 w-full h-full flex items-center hero-overlay bg-opacity-70">
         <p className="text-white  flex w-1/2  justify-center font-semibold text-6xl">
           {text}
         </p>
